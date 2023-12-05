@@ -1,0 +1,271 @@
+1. Giriş / Algoritma
+
+2. Bilgisayar ve Python
+
+3. Değişkenler
+
+---Notlar---
+
+- Python, büyük küçük harf ayrımı yapan bir dildir. 
+- Bir değişken isminin ilk karakteri ya harf ya da alt çizgi "_" olmalıdır.
+- Bir değişken ismi içerisinde alt çizgi hariç boşluk veya diğer özel karakterler bulunmamalıdır.
+- Bir değişken ismi python kuralı olamaz.
+- Değişken isminde türkçe karakter kullanılmamalı.
+
+---Komutlar---
+
+import keyword =>
+keyword.kwlist => komutları listelemek için.
+
+3.5 Operatörler
+
+(**) => üs alma
+(//) => tam sayı bölme
+
+3.7 İşlem Önceliği Sırası : (parantez / üssü), (çarpma / bölme / mod), (toplama / çıkarma)
+
+3.10 Veri Tipleri
+
+---Notlar---
+
+*Yorum satırı => "#" işaretiyle oluşturulur.
+
+---Komutlar---
+
+type => değişkenin hangi veri tipinde olduğunu öğrenmemiz için. örneğin; type(A) "A:bir değişken"
+
+
+4. Veri İşlemleri
+
+---Notlar---
+
+Ters slash (\) yazdırabilmek için print içerisinde iki tane (\) işaretini kullanmalıyız.
+İnput fonksiyonu varsayılan olarak string tipinde değer alır.
+
+---Kodlar---
+
+sep (separate) => Çıktı mesajındaki karakterler arasında ayraç koymak için kullanılır. Bir print'te birden fazla şey yazdırırsak birbirinden ne ile ayıracağımızı seçmek için. (4.3_veri çıkış komutu)
+end => bir değer sorduğumuz zaman kullanıcının gireceği değer alt satıra geçsin istemiyorsak bu kodu kullanabiliriz. (4.3_veri çıkış komutu)
+\n (new line) => alt satıra geçmek için.
+\t => tab yaptırmak için kullanılır. Yani bir tab boşluk oluşturmak.
+
+
+5. Koşul ve Karşılaştırma Operatörleri
+
+6. Döngüler
+
+---Notlar---
+
+for => Döngü sayısı önceden bellidir.
+while => Döngü sayısı önceden belli olmayıp koşula bağlıdır.
+Liste => Birden fazla değişkeni aynı anda bir değişkenin içine atabilmek. (Sıralı eleman dizisi)
+in/not in operatörleri => bu operatörler sayesinde bir değişkenin listenin içerisinde olup olmadığını kontrol ediyoruz.
+
+range fonksiyonu => bir aralıktaki şeyleri yazdırır.
+* Eğer değer, koşul değerine eşit olursa yazdırmadan çıkar.
+* range aralığını yazdırmak istiyorsak list fonksiyonunu kullanmalıyız.
+
+
+7. Fonksiyonlar
+
+---Notlar---
+
+- fonksiyonun içerisinde tanımladığımız bir değeri fonksiyonunun dışında kullanamayız.
+- global değer => fonksiyonda ve ana programda kullanılabilen değişkenler.
+-yerel değer => sadece atama yapılan fonksiyon içerisinde kullanılabilir.
+
+Fonksiyon : programın belli işlevini (görevini) yerine getiren küçük program parçalarıdır.
+
+---Komutlar---
+
+- def (definition function) => fonksiyon tanımlamak için kullanılır.
+- return() => çıktıları incelemek için. Fonksiyonun yaptığı işlemin sonucunda ulaştığı değerin ya da metinin ana program içerisinde kullanılabilmesi için kullanılır.
+- pass => boş olan fonksiyonu çalıştırmadan atlatmak için kullanılır. (pass == return)
+- lambda => fonksiyonu kısaltmak için kullanılır.
+
+---Terimler---
+
+- özyinelemeli fonksiyon => bir fonksiyonun içerisinde yine aynı fonksiyonu çağırmak.
+
+
+8. String İşlemleri
+
+---Notlar---
+
+8.2_indis (index) => bir karakterin bulunduğu yer. Boşluk da bir karakterdir. Ters (eksi) indisler de vardır.
+8.10_string değerleri karşılaştırmak. -> "Furkan" == "Furkan" | "Furkan" is "Furkan"
+8.14_string içerisinde başka string aramak -> "an" in "Furkan" | "as" not in "selam"
+
+---Fonksiyonlar---
+
+replace => elimizdeki string değeri değiştirmek için kullanılır. Örnek kullanım stringGüncelleme.py içinde var.
+split => değeri belli yerlerden kesmemize yarar.
+len() => değerin karakter sayısını öğrenmemize yarar.
+count => belli bir karakterin kullanılma sayısını örenmek için.
+"".join(reversed()) => 8.12 -> string ters çevirme
+lower() => değişkenin içerisindeki tüm harfleri küçük harf yapar.
+upper() => değişkenin içerisindeki tüm harfleri büyük harf yapar.
+swapcase() => küçük harfleri büyük, büyük harfleri küçük yapar.
+capitalize() => sadece baş harfi büyük yapar gerisini küçük yapar.
+
+
+9. Diziler ve Listeler
+
+---Notlar---
+
+- Diziler, Python'da liste şeklinde kullanılır.
+- Listelerin veri tipi <list>'dir.
+- Listelerde her türden eleman olabilir.
+
+---Fonksiyonlar---
+
+- index() => liste içerisindeki elemanın indis sırasını öğrenmek için.
+- append() => listenin sonuna eleman eklemek için. -> .append(eleman)
+- insert() => listenin arasına eleman eklemek için. -> .insert(indis,eleman)
+- extend() => iki listeyi birleştirmek için. Liste2'yi liste1'e ekler. -> liste1.extend(liste2)
+- reverse() => listeyi ters çevirmek için. Bu fonksiyon kullanıldığında asıl liste ters çevirilmiş olur. Eğer asıl liste değişsin istemiyorsak liste[::-1] ' i kullanabiliriz.
+- min() => listedeki en küçük değeri gösterir. -> min(liste)
+- max() => listedeki en büyük değeri gösterir. -> max(liste)
+- remove() => listedeki bir elemanı silmek için. Aynı elemandan birden fazla var ise önce ilk elemanı siler. -> liste.remove(eleman)
+- pop() => belirli indisdeki elemanı silmek için. -> liste.pop(indisSayısı)
+- clear() => listedeki elemanların tamamını silmek için. -> liste.clear()
+- sort() => listenin içindeki elemanları küçükten büyüğe doğru sıralar. -> liste.sort()
+- enumerate() => elemanları numaralandırmak için. for döngüsü ile birlikte kullanılır.
+- stack (yığın) => eleman ekleme çıkarma işlemlerinin listenin en son elemanı üzerinden gerçekleştiği özel bir yapıdır. (Listeye son giren - ilk çıkar -> last in - first out)
+- queue (kuyruk) => eleman ekleme işleminin listenin sonundan ve çıkarma işlemlerinin listenin başından gerçekleştiği özel bir yapıdır. (Listeye son giren - son çıkar -> last in - last out)
+
+
+10. Sözlükler
+
+---Notlar---
+
+- Sözlük oluştururken süslü parantez '{}' kullanılır.
+- İki kümeyi birleştirmek için -> k1|k2 => k2:küme_1, k1:küme_2
+*-* tuple (demet) => listeden farkı : tuple'ın içi değiştirilemez.
+- tuple, hafızada listeye göre daha az yer kaplar. Bu yüzden de değiştirilemez.
+
+---Fonksiyonlar---
+
+- dict([]) (dictionary) => sözlük oluşturmak için. -> köşeli parantez içine parantez '()' açılıp içine sözlük oluşturulur.
+- get() => anahtar kelimeyi girip, sözlükteki karşılığını görmek için.
+- pop() => girilen anahtar kelimeyi ve karşılığını siler.
+- keys() => anahtar kelimeleri gösterir.
+- values() => değerleri gösterir.
+- items() => sözlük elemanlarını gösterir. (Anahtarlı ve değerli bir şekilde.)
+
+
+11. Nesne ve Sınıf
+
+---Notlar---
+
+- fonksiyonlar, bir sınıfın altında olduğu zaman metot ismini alıyor.
+- pass kullanmanın amacı : oluşturduğumuz boş bir class sorun çıkarmasın diye
+- self kullanım amacı : sözü edilen nesneyi doğrudan göstermek için.
+- Bir sınıfta birden fazla nesne üretilebilir.
+- sınıf içinde metot tanımlarken self parametresi kullanılır. Metot çağırılırken self'i yazmamıza gerek yok.
+- metot vs fonksiyon => sunum yaparken fonksiyonları teker teker çağırmamız gerekiyor, metotta ise tekte tüm metodu çağırabiliriz.
+- from modülAdı import * => tüm fonksiyonlara ulaşmak için.
+- from modülAdı import fonkAdı => sadece istediğimiz fonksiyonu çağırmak için.
+- nesneAdı=sınıf(argümanlar) => Bir sınıf altında nesne tanımlama.
+
+---Kavramlar---
+
+- Kalıtım (inheritance), üst sınıfa ait olan özelliklerin alt sınıflara miras olarak aktarılması özelliğidir. Böylece alt sınıf üst sınıfın özelliklerini taşır.
+
+---Metotlar---
+
+- init() => python dilinde sınıf tanımlarken, sınıf değişkenlerine başlangıç değerlerini init() metodu ile atanabilir. -> __init__(self,parametre,parametre...)
+* init() metodunda return komutu kullanılmaz.
+
+---Fonksiyonlar---
+
+- dir() => parantez içine yazılan nesnenin metot ve özelliklerini gösterir. Fonksiyonu kullandığımız zaman alt çizgi olan metotlar python dilinin kendine ait metotlarıdır. Alt çizgi olmayanlar bizim eklediklerimiz
+- datetime => tarih döndürme fonksiyonu. Fonksiyonu kullanmadan önce import etmemiz geerekiyor.
+- import => fonksiyonları çağırmak için.
+- import math,random => iki fonksiyonu tekte çağırmak için.
+- import modülAdı as yeniModülAdı => modülün ismini kısaltmak için kullanılır.
+
+
+12. Rastgele Sayı Üretimi
+
+---Fonksiyonlar---
+
+- abs() => içine girilen sayının mutlak değerini alır.
+- round() => float bir sayıyı en yakın int sayıya çevirir.
+- pow() => içindeki sayının kuvvetini alır.
+- bin() => içine girileni binary (ikilik) sayı sistemine dönüştürür.
+- hex() => içine girileni hexadecimal (onaltılık) sayı sistemine dönüştürür.
+- chr() => ASCII koduna dönüştürür.
+- sum() => içine girilen tüm değerleri toplar.
+- sqrt() => karekökünü alır. İmport etmeden çalışmaz. Ve sonra modülün ismi ile birlikte çalıştırılmalı
+- math.pi => pi sayısı demek.
+- gcd() => iki sayının en büyük ortak bölenini bulur. Modül ismi ile birlikte kullanılır.
+
+****Random sayılar
+- random.random() => 0-1 arasında rastgele float bir sayı üretir.
+- random.randint(sayı1,sayı2) => girilen iki değer arasında rastgele int bir sayı üretir. Sınırlar dahil.
+- random.randrange(1,13,2) => 1 ile 13 arasında 2'şer atlayarak	random sayı üret demek. Yani tek sayılardan birini üreticek.
+- random.uniform(sayı1,sayı2) => girilen iki sayı arasında float bir sayı üretir. 
+- random.choice(listeAdı) => bir liste içinden rastgele sayı üretmek için.
+- random.shuffle(listeAdı) => listenin içerisindeki elemanları karıştırmak için.
+- random.saple(listeAdı,sayı) => listenin içerisinde kaç tane elemanı rastgele seçmek istiyorsak giriyoruz veriyor.
+
+
+13. Turtle ile Çizim Uygulamaları
+
+---Notlar---
+
+- Turtle'ı kullanabilmek için öncelikle import etmeliyiz.
+- 256*256*256 tane farklı renk tonu elde edebiliriz.
+
+---Terimler---
+
+- piksel : piksel, bir ekranda oluşan görüntüde insan gözünün ayırt edebileceği en küçük birimdir. Aslında pikseller; kırmızı, mavi ve yeşil renkteki alt piksellerden (sub-pixel) meydana gelir ancak insan gözünün bunu görmesi mümkün değildir.
+
+---Fonksiyonlar---
+
+- position() => ekranın hangi konumunda olduğumuzu öğrenmek için.
+- pos() => ekranın hangi konumunda olduğumuzu öğrenmek için.
+- goto() => ekranın belli bir konumuna gitmek için.
+- setposition() => ekranın belli bir konumuna gitmek için.
+- set.pos() => ekranın belli bir konumuna gitmek için.
+- reset() => başlangıç konumuna geri dönmek için
+- home() => başlangıç konumuna geri dönmek için
+- setx() => sadece x'in konumunu değiştirmek için
+- sety() => sadece y'nin konumunu değiştirmek için
+- forward() => ileri gitmesi için
+- fd() => ileri gitmesi için
+- backward() => geri gitmek için
+- bk() => geri gitmek için
+- right() => sağa dönmek için
+- left() => sola dönmek için
+- getshapes() => bu fonksiyon ile hangi simgeler olduğunu öğreniyoruz.
+- hideturtle() => simgeyi gizlemek için
+- showturtle() => simgeyi tekrar göstermek için
+- pensize() => kalınlığı ayarlamak için
+- color() => rengi belirlemek için
+- begin_fill => rengi doldurmaya başlatmak için
+- end_fill => rengi doldurmayı sonlandırmak için
+- colormode() => renkleri sayısal değerler ile tonlarını belirlemek için.
+
+
+14. Olay Tabanlı Projeler
+
+- oncliclk(f)	      => fare butonu tıklandığında 'f' fonksiyonunu çağırır.
+- onscreenclick(f)    => fare butonu bırakıldığında 'f' fonksiyonunu çağırır.
+- onrelease(f)        => fare butonu bırakıldığında 'f' fonksiyonunu çağırır.
+- ondrag(f)           => fare sürüklemesi olduğunda 'f' fonksiyonunu çağırır.
+- listen() 	      => tuş olaylarını yakalamak için turtle ekranını dinler.
+- onkey(f,tus	      => ilgili klavye tuşu bırakıldığında 'f' fonksiyonunu çağırır.
+- onkeyrelease(f,tus) => ilgili klavye tuşu bırakıldığında 'f' fonksiyonunu çağırır.
+- onkeypress(f,tus)   => ilgili klavye tuşuna basıldığında 'f' fonksiyonununu çağırır.
+- ontimer(f,t)	      => t milisaniye sonra 'f' fonksiyonunu çağıracak sayaç kurar.
+- mainloop() | done() => olay yakalama döngüsünü başlatır.
+- exitonclick()	      => fareye tıklandığında bye() fonksiyonunu çağırır.
+- textinput("başlık","mesaj") => bir iletişim kutusu içerisinde string tipte veri girilmesini bekler.
+- numinput("başlık","mesaj") => ir iletişim kutusu içerisinde float tipte veri girilmesini bekler.
+- write() 	      => ekrana yazı yazar.
+- delay() => milisaniye cinsinden çizim hareketleri arasındaki gecikmeyi ayarlar.
+- tracer(n,delay) => animasyon ayarlarını değiştirir. Çizimleri animasyonsuz yapmak için tracer(0) kullanılır.
+- update() => çizim ekranını günceller.
+- distance() => kaplumbağanın konumu ile bilgileri verilen başka bir nokta ya da bir turtle nesnesi ile arasındaki mesafeyi verir.
